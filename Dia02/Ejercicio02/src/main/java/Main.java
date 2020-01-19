@@ -10,6 +10,7 @@ public class Main {
         double radio = Double.parseDouble(t.nextLine());
         Circulo x = new Circulo(radio);
         System.out.println("Area del circulo = " + x.calcularArea());
+        System.out.println("Longitud del circulo =" + x.calcularLongitud());
         
     }   
 }

@@ -9,6 +9,10 @@ public class Circulo {
     public double calcularArea(){
         return Math.pow(PI*this.radio,2);
     }
+    
+    public double calcularLongitud(){
+        return 2*PI*this.radio;
+    }
 
     public double getRadio() {
         return radio;
