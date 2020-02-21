@@ -6,14 +6,12 @@ import java.util.ArrayList;
 public class Main {
 
     public static void main(String[] args) {
-        // miMarco marco1 = new miMarco();
         Numbers numb = new Numbers();
-        // marco1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 }
 
-class Numbers extends JFrame {
-    JPanel container;
+class Numbers {
+    JFrame container;
     ArrayList<JPanel> panels;
 
     public Numbers() {
@@ -21,17 +19,18 @@ class Numbers extends JFrame {
     }
 
     public void arrayList() {
-
-        container = new JPanel();
-        container.setVisible(true);
+        container = new JFrame();
+        container.setSize(300, 500);
         container.setLayout(new GridLayout(0, 6));
+        container.setVisible(true);
+        container.setLocation(500, 300);
+        container.setTitle("Cuadraditos UwU");
         container.setPreferredSize(new Dimension(300, 500));
-
+        container.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 
         panels = new ArrayList();
         for (int i = 0; i < 60; i ++) {
-            System.out.println(i);
             JPanel panel = new JPanel(new FlowLayout(FlowLayout.CENTER));
             JLabel number = new JLabel("" + (i + 1));
             panel.setBorder(BorderFactory.createEtchedBorder());
@@ -40,9 +39,7 @@ class Numbers extends JFrame {
         }
 
         panels.forEach(cons -> {
-            System.out.println(cons);
             container.add(cons);
         });
     }
 }
-
